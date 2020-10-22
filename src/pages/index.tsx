@@ -10,10 +10,14 @@ import Dump from "../components/dump"
 import * as styles from "./index.module.scss"
 
 interface MDXPost {
+    id: string
     excerpt: string
     frontmatter: {
         title: string
         date: string
+    }
+    fields: {
+        slug: string
     }
 }
 
@@ -36,12 +40,12 @@ const IndexPage = ({ data }: IndexProps): React.ReactNode => (
             <h1>Hi people</h1>
             <p>Welcome to your new Gatsby site.</p>
             <p>Now go build something great.</p>
-            {data.allMdx.nodes.map(({ excerpt, frontmatter }) => (
-                <>
+            {data.allMdx.nodes.map(({ id, excerpt, frontmatter, fields }) => (
+                <Link key={id} to={fields.slug}>
                     <h1>{frontmatter.title}</h1>
                     <p>{frontmatter.date}</p>
                     <p>{excerpt}</p>
-                </>
+                </Link>
             ))}
             <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
                 <Image />
@@ -65,6 +69,9 @@ export const query = graphql`
                 frontmatter {
                     title
                     date
+                }
+                fields {
+                    slug
                 }
             }
         }
