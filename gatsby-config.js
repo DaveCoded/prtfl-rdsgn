@@ -1,9 +1,11 @@
+const siteMetadata = {
+    title: `Dave's web presence`,
+    description: `This is the place the things from Dave's head spill out into. Tread carefully.`,
+    author: `Dave Bernhard`
+}
+
 module.exports = {
-    siteMetadata: {
-        title: `Dave's web presence`,
-        description: `This is the place the things from Dave's head spill out into. Tread carefully.`,
-        author: `Dave Bernhard`
-    },
+    siteMetadata,
     plugins: [
         `gatsby-plugin-react-helmet`,
         // TODO: Fix this so that you can source images and post with gatsby-source-filesystem
