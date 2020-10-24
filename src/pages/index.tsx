@@ -33,7 +33,7 @@ interface IndexProps {
  ** Gatsby graphql runs the query (SITE_INDEX_QUERY) at runtime and gives
  ** us the results as props to your component via the data prop
  */
-const IndexPage = ({ data }: IndexProps): React.ReactNode => (
+const IndexPage = ({ data }: IndexProps): JSX.Element => (
     <Layout>
         <SEO title="Home" />
         <div className={styles.App}>
