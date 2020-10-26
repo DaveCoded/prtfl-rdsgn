@@ -1,13 +1,13 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
+import React from 'react'
+import { Link, graphql } from 'gatsby'
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import Layout from '../components/layout'
+import Image from '../components/image'
+import SEO from '../components/seo'
 
-import Dump from "../components/dump"
+import Dump from '../components/dump'
 
-import * as styles from "./index.module.scss"
+import * as styles from './index.module.scss'
 
 interface MDXPost {
     id: string

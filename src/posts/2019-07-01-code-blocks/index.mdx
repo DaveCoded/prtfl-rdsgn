@@ -1,6 +1,17 @@
-import React, { ReactElement } from 'react'
+---
+title: Code Blocks
+date: 2019-07-01
+published: true
+---
 
-const Dump = (props: Record<string, unknown>): ReactElement => (
+## Yes! Some code!
+
+Here is the `Dump` component!
+
+```jsx
+import React from 'react'
+
+const Dump = props => (
     <div
         style={{
             fontSize: 20,
@@ -9,15 +20,17 @@ const Dump = (props: Record<string, unknown>): ReactElement => (
             background: 'white'
         }}
     >
+        {/* This is a comment */}
         {Object.entries(props).map(([key, val]) => (
             <pre key={key}>
                 <strong style={{ color: 'white', background: 'red' }}>
                     {key} 💩
                 </strong>
-                {JSON.stringify(val, null, ' ')}
+                {JSON.stringify(val, '', ' ')}
             </pre>
         ))}
     </div>
 )
 
 export default Dump
+```
