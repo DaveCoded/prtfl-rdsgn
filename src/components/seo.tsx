@@ -5,9 +5,9 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-import React from "react"
-import { Helmet } from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
+import React from 'react'
+import { Helmet } from 'react-helmet'
+import { useStaticQuery, graphql } from 'gatsby'
 
 interface MetaObjectWProperty {
     property: string
@@ -30,9 +30,9 @@ interface SEOProps {
 
 const SEO: React.FunctionComponent<SEOProps> = ({
     description,
-    lang = "en",
+    lang = 'en',
     meta = [],
-    title,
+    title
 }) => {
     const { site } = useStaticQuery(
         graphql`
@@ -54,43 +54,43 @@ const SEO: React.FunctionComponent<SEOProps> = ({
     return (
         <Helmet
             htmlAttributes={{
-                lang,
+                lang
             }}
             title={title}
             titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : undefined}
             meta={[
                 {
                     name: `description`,
-                    content: metaDescription,
+                    content: metaDescription
                 },
                 {
                     property: `og:title`,
-                    content: title,
+                    content: title
                 },
                 {
                     property: `og:description`,
-                    content: metaDescription,
+                    content: metaDescription
                 },
                 {
                     property: `og:type`,
-                    content: `website`,
+                    content: `website`
                 },
                 {
                     name: `twitter:card`,
-                    content: `summary`,
+                    content: `summary`
                 },
                 {
                     name: `twitter:creator`,
-                    content: site.siteMetadata?.author || ``,
+                    content: site.siteMetadata?.author || ``
                 },
                 {
                     name: `twitter:title`,
-                    content: title,
+                    content: title
                 },
                 {
                     name: `twitter:description`,
-                    content: metaDescription,
-                },
+                    content: metaDescription
+                }
             ].concat(meta)}
         />
     )

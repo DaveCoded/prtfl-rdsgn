@@ -1,8 +1,8 @@
-import React from "react"
-import { useSiteMetadata } from "../hooks/useSiteMetadata"
+import React from 'react'
+import { useSiteMetadata } from '../hooks/useSiteMetadata'
 
-import Header from "./header"
-import "./layout.css"
+import Header from './header'
+import './layout.css'
 
 interface LayoutProps {
     children: React.ReactNode
