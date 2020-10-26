@@ -7,8 +7,6 @@ import SEO from '../components/seo'
 
 import Dump from '../components/dump'
 
-import * as styles from './index.module.scss'
-
 interface MDXPost {
     id: string
     excerpt: string
@@ -36,7 +34,7 @@ interface IndexProps {
 const IndexPage = ({ data }: IndexProps): React.ReactNode => (
     <Layout>
         <SEO title="Home" />
-        <div className={styles.App}>
+        <div>
             <h1>Hi people</h1>
             <p>Welcome to your new Gatsby site.</p>
             <p>Now go build something great.</p>
