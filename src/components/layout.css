@@ -1,3 +1,41 @@
+@font-face {
+    font-family: 'Dank Mono';
+    src: url('../../static/fonts/Dank_Mono/DankMono-Regular.ttf')
+        format('truetype');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Dank Mono';
+    src: url('../../static/fonts/Dank_Mono/DankMono-Italic.ttf')
+        format('truetype');
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Wotfard';
+    src: url('../../static/fonts//Wotfard_Webfont_Complete/Wotfard_Roman_Webfont/wotfard-regular-webfont.eot');
+    src: url('../../static/fonts/Wotfard_Webfont_Complete/Wotfard_Roman_Webfont/wotfard-regular-webfont.woff2')
+            format('woff2'),
+        url('../../static/fonts//Wotfard_Webfont_Complete/Wotfard_Roman_Webfont/wotfard-regular-webfont.ttf')
+            format('truetype');
+
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Wotfard';
+    src: url('../../static/fonts//Wotfard_Webfont_Complete/Wotfard_Italic_Webfont/wotfard-regularitalic-webfont.eot');
+    src: url('../../static/fonts/Wotfard_Webfont_Complete/Wotfard_Italic_Webfont/wotfard-regularitalic-webfont.woff2')
+            format('woff2'),
+        url('../../static/fonts//Wotfard_Webfont_Complete/Wotfard_Italic_Webfont/wotfard-regularitalic-webfont.ttf')
+            format('truetype');
+
+    font-weight: 400;
+    font-style: italic;
+}
+
 html {
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
@@ -10,7 +48,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: hsla(0, 0%, 0%, 0.8);
-    font-family: georgia, serif;
+    font-family: 'Wotfard', Georgia, serif;
     font-weight: normal;
     word-wrap: break-word;
     font-kerning: normal;
@@ -81,8 +119,9 @@ h1 {
     padding-top: 0;
     margin-bottom: 1.45rem;
     color: inherit;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-        Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: 'Wotfard', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+        Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+        sans-serif;
     font-weight: bold;
     text-rendering: optimizeLegibility;
     font-size: 2.25rem;
@@ -127,7 +166,7 @@ code,
 kbd,
 pre,
 samp {
-    font-family: monospace;
+    font-family: 'Dank Mono', monospace;
     font-size: 1em;
 }
 figure {
@@ -260,8 +299,9 @@ h2 {
     padding-top: 0;
     margin-bottom: 1.45rem;
     color: inherit;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-        Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: 'Wotfard', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+        Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+        sans-serif;
     font-weight: bold;
     text-rendering: optimizeLegibility;
     font-size: 1.62671rem;
@@ -277,8 +317,9 @@ h3 {
     padding-top: 0;
     margin-bottom: 1.45rem;
     color: inherit;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-        Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: 'Wotfard', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+        Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+        sans-serif;
     font-weight: bold;
     text-rendering: optimizeLegibility;
     font-size: 1.38316rem;
@@ -294,8 +335,9 @@ h4 {
     padding-top: 0;
     margin-bottom: 1.45rem;
     color: inherit;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-        Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: 'Wotfard', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+        Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+        sans-serif;
     font-weight: bold;
     text-rendering: optimizeLegibility;
     font-size: 1rem;
@@ -311,8 +353,9 @@ h5 {
     padding-top: 0;
     margin-bottom: 1.45rem;
     color: inherit;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-        Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: 'Wotfard', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+        Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+        sans-serif;
     font-weight: bold;
     text-rendering: optimizeLegibility;
     font-size: 0.85028rem;
@@ -328,8 +371,9 @@ h6 {
     padding-top: 0;
     margin-bottom: 1.45rem;
     color: inherit;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-        Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: 'Wotfard', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+        Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+        sans-serif;
     font-weight: bold;
     text-rendering: optimizeLegibility;
     font-size: 0.78405rem;
@@ -406,8 +450,8 @@ pre {
     margin-bottom: 1.45rem;
     font-size: 0.85rem;
     line-height: 1.42;
-    background: hsla(0, 0%, 0%, 0.04);
-    border-radius: 3px;
+    background: #fbfbe8;
+    border-radius: 12px !important;
     overflow: auto;
     word-wrap: normal;
     padding: 1.45rem;
@@ -567,8 +611,8 @@ tt,
 code {
     background-color: hsla(0, 0%, 0%, 0.04);
     border-radius: 3px;
-    font-family: 'SFMono-Regular', Consolas, 'Roboto Mono', 'Droid Sans Mono',
-        'Liberation Mono', Menlo, Courier, monospace;
+    font-family: 'Dank Mono', 'SFMono-Regular', Consolas, 'Roboto Mono',
+        'Droid Sans Mono', 'Liberation Mono', Menlo, Courier, monospace;
     padding: 0;
     padding-top: 0.2em;
     padding-bottom: 0.2em;

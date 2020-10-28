@@ -2,7 +2,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Highlight, { defaultProps, Language } from 'prism-react-renderer'
-import theme from 'prism-react-renderer/themes/nightOwl'
+import theme from 'prism-react-renderer/themes/duotoneLight'
 
 import { copyToClipboard } from '../../utils/copyToClipboard'
 
@@ -17,7 +17,6 @@ export const Pre = styled.pre`
         line-height: 1.3rem;
         height: 1.3rem;
     }
-    font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
     position: relative;
 `
