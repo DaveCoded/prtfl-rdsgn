@@ -3,6 +3,7 @@ import React from 'react'
 import { MDXProvider } from '@mdx-js/react'
 
 import Code from './src/components/mdx/Code'
+import BetterComments from './src/posts/better-comments/BetterCommentsExample'
 
 const components = {
     h2: ({ children }) => (
@@ -24,7 +25,8 @@ const components = {
                 />
             )
         }
-    }
+    },
+    BetterComments
 }
 
 export const wrapRootElement = ({ element }) => (
