@@ -5,13 +5,12 @@ import Layout from '../components/layout'
 import Image from '../components/image'
 import SEO from '../components/seo'
 
-import Dump from '../components/dump'
-
 interface MDXPost {
     id: string
     excerpt: string
     frontmatter: {
         title: string
+        description: string
         date: string
     }
     fields: {
@@ -35,16 +34,27 @@ const IndexPage = ({ data }: IndexProps): React.ReactNode => (
     <Layout>
         <SEO title="Home" />
         <div>
-            <h1>Hi people</h1>
-            <p>Welcome to your new Gatsby site.</p>
-            <p>Now go build something great.</p>
-            {data.allMdx.nodes.map(({ id, excerpt, frontmatter, fields }) => (
+            {data.allMdx.nodes.map(({ id, frontmatter, fields }) => (
                 <>
-                    <Link key={id} to={fields.slug}>
-                        <h2>{frontmatter.title}</h2>
+                    {/* // todo: turn this into a styled component - no inline styles unless necessary */}
+                    <Link
+                        key={id}
+                        to={fields.slug}
+                        style={{ textDecoration: 'none' }}
+                    >
+                        <h2
+                            style={{
+                                fontWeight: 600,
+                                fontSize: '2rem',
+                                color: '#a51cad',
+                                letterSpacing: '1.4px',
+                                marginBottom: '0.15em'
+                            }}
+                        >
+                            {frontmatter.title}
+                        </h2>
                     </Link>
-                    <p>{frontmatter.date}</p>
-                    <p>{excerpt}</p>
+                    <p>{frontmatter.description}</p>
                 </>
             ))}
             <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
@@ -52,7 +62,6 @@ const IndexPage = ({ data }: IndexProps): React.ReactNode => (
             </div>
             <Link to="/page-2/">Go to page 2</Link> <br />
             <Link to="/using-typescript/">Go to Using TypeScript</Link>
-            <Dump data={data} />
         </div>
     </Layout>
 )
@@ -65,10 +74,9 @@ export const query = graphql`
         ) {
             nodes {
                 id
-                excerpt(pruneLength: 250)
                 frontmatter {
                     title
-                    date(formatString: "DD/MM/YY")
+                    description
                 }
                 fields {
                     slug

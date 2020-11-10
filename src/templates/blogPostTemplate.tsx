@@ -8,6 +8,7 @@ interface Data {
         mdx: {
             frontmatter: {
                 title: string
+                description: string
                 date: string
             }
             // TODO: type this when you know what it is
@@ -21,7 +22,10 @@ const BlogTemplate = ({ data }: Data): ReactElement => {
     return (
         <Layout>
             <h1>{frontmatter.title}</h1>
-            <p>{frontmatter.date}</p>
+            {/* // todo: use styled components not inline styles */}
+            <p style={{ color: '#4696af', marginTop: '-0.8em' }}>
+                {frontmatter.date}
+            </p>
             <MDXRenderer>{body}</MDXRenderer>
         </Layout>
     )
@@ -33,6 +37,7 @@ export const query = graphql`
             body
             frontmatter {
                 title
+                description
                 date(formatString: "DD/MM/YY")
             }
         }
