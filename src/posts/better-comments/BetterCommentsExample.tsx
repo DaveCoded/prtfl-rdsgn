@@ -14,7 +14,7 @@ const BetterComments: React.FC<BetterCommentsProps> = (): JSX.Element => (
             padding: '1.5rem',
             overflowX: 'auto',
             borderRadius: '3px',
-            fontFamily: 'Courier New, Courier, monospace',
+            fontFamily: 'Dank Mono, Courier, monospace',
             fontWeight: 'bold'
         }}
     >

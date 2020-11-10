@@ -17,7 +17,7 @@ export const Pre = styled.pre`
         line-height: 1.3rem;
         height: 1.3rem;
     }
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Dank Mono', Courier, monospace;
     font-weight: bold;
     position: relative;
 `
