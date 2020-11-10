@@ -39,11 +39,13 @@ const IndexPage = ({ data }: IndexProps): React.ReactNode => (
             <p>Welcome to your new Gatsby site.</p>
             <p>Now go build something great.</p>
             {data.allMdx.nodes.map(({ id, excerpt, frontmatter, fields }) => (
-                <Link key={id} to={fields.slug}>
-                    <h1>{frontmatter.title}</h1>
+                <>
+                    <Link key={id} to={fields.slug}>
+                        <h2>{frontmatter.title}</h2>
+                    </Link>
                     <p>{frontmatter.date}</p>
                     <p>{excerpt}</p>
-                </Link>
+                </>
             ))}
             <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
                 <Image />
@@ -66,7 +68,7 @@ export const query = graphql`
                 excerpt(pruneLength: 250)
                 frontmatter {
                     title
-                    date
+                    date(formatString: "DD/MM/YY")
                 }
                 fields {
                     slug
